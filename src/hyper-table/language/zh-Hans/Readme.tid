@@ -6,26 +6,26 @@ title: $:/plugins/linonetwo/hyper-table/language/zh-Hans/Readme
 
 <<lingo Description>>
 
-!! 使用微件
+!! Usa widgets
 
-本插件提供几种微件：
+Este complemento proporciona varios widgets.：
 
-# 基本表格
-#* 基本表格是一种常见的可视化数据形式，用于展示和组织数据。它由行和列的网格状结构组成，以清晰、结构化的方式呈现大量数据。基本表格通常提供一些交互和可视化功能，使用户能够对数据进行查找、排序、分页和格式化等操作。
-#* 微件为 `<$basic-table />`
-# 数据透视表
-#* 数据透视表又名多维分析表、交叉表、Pivot Table，指的是可以在行维度和列维度放入一个或多个维度，显示维度之间相互关系的一种表格。用户可以一目了然地分析出各种场景指标以及对比，旨在帮助业务分析推动决策。
-#* 微件为 `<$pivot-table />`
+# Formas basicas
+#* Las tablas basicas son una forma comun de visualizacion de datos que se utiliza para mostrar y organizar datos. Consiste en una estructura similar a una cuadricula de filas y columnas para presentar grandes cantidades de datos de forma clara y estructurada. Las tablas basicas suelen proporcionar algunas funciones visuales e interactivas que permiten a los usuarios buscar, ordenar, paginar y formatear datos.。
+#* El widget es `<$basic-table />`
+# Mesa dinamica
+#* La tabla dinamica tambien se conoce como tabla de analisis multidimensional y tabla cruzada.、Pivot Table，Se refiere a una tabla que puede colocar una o mas dimensiones en la dimension de fila y la dimension de columna para mostrar la relacion entre las dimensiones. Los usuarios pueden analizar varios indicadores de escenarios y comparaciones de un vistazo, con el objetivo de ayudar al analisis empresarial a impulsar la toma de decisiones.。
+#* El widget es `<$pivot-table />`
 
 !!! <<lingo ParametersTable/Caption>>
 
-微件上可以使用各种参数，你可以先在文档网站上查看用例，从例子中学习，或根据参数表自己拼凑参数。
+Se pueden utilizar varios parametros en el widget. Primero puede ver los casos de uso en el sitio web de documentacion y aprender de los ejemplos, o puede ensamblar los parametros usted mismo segun la tabla de parametros.。
 
-[[查看参数表|$:/plugins/linonetwo/hyper-table/ParametersTable]]
+[[Ver tabla de parametros|$:/plugins/linonetwo/hyper-table/ParametersTable]]
 
-!! 用 Wikitext 生成 columns
+!! uso Wikitext Generar columns
 
-传给 `columns=` 的值最终会按纯 JavaScript 执行。如果列定义里依赖 Wikitext 变量、翻译后的标题，或可复用的 `fieldFormat` 片段，应该先把这些片段渲染成纯文本，再把最终的 columns 文本再渲染一次后传给表格。
+pasar a `columns=` El valor de will eventualmente se expresara como puro JavaScript Ejecutar. Si la definicion de la columna depende de Wikitext Variables, titulos traducidos o reutilizables `fieldFormat` Fragmentos, estos fragmentos deben convertirse primero en texto sin formato y luego en el final. columns El texto se vuelve a representar y luego se pasa a la mesa.。
 
 ```tid
 \procedure columns()
@@ -54,9 +54,9 @@ title: $:/plugins/linonetwo/hyper-table/language/zh-Hans/Readme
 </$let>
 ```
 
-这样既可以继续用 Wikitext 组织列定义，又能保证 hyper-table 最终拿到的是可执行的 JavaScript 对象字面量。
+De esta manera podras seguir usando Wikitext Organice las definiciones de las columnas y asegurese de hyper-table Lo que obtienes al final es ejecutable. JavaScript Objeto literal。
 
-!! 问题排查
+!! Solucion de problemas
 
-* 表格不展示，检查发现宽度为 0
-** 试着给父容器加上 `width: 100%`，因为表格会尝试适配父容器宽度，而如果父容器一开始宽度为 0 就会这样了。
+* La tabla no se muestra y se encuentra que el ancho es 0
+** Intente agregarlo al contenedor principal. `width: 100%`，Porque la tabla intentara adaptarse al ancho del contenedor principal, y si el contenedor principal inicialmente tiene un ancho de 0 Sera asi。

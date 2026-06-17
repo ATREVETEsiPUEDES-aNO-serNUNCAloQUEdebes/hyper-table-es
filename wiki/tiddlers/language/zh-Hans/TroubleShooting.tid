@@ -1,14 +1,14 @@
 title: language/zh-Hans/TroubleShooting
 
-! 问题排查
+! Solucion de problemas
 
-!! 配置项只部分生效，或完全没生效
+!! Los elementos de configuracion solo funcionan parcialmente o no funcionan en absoluto.
 
-此类问题，可以将配置内容复制出来，放到 https://stackblitz.com/ 之类的在线 JS 编辑器里，或电脑上的 VSCode 里，检查语法有没有问题。
+Para este tipo de problema, puede copiar el contenido de la configuracion y colocarlo en https://stackblitz.com/ Me gusta en linea JS En el editor o en tu computadora VSCode Aqui, comprueba si hay algun problema con la gramatica.。
 
-!!! 可能是 JS 语法错误，例如某行结尾忘加逗号
+!!! Probablemente JS Errores gramaticales, como olvidar agregar una coma al final de una linea.
 
-错误的
+Incorrecto
 
 ```js
 [
@@ -17,7 +17,7 @@ title: language/zh-Hans/TroubleShooting
 ]
 ```
 
-正确的，补上了结尾的逗号
+Correcto, agregue la coma final.
 
 ```js
 [

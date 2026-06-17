@@ -1,15 +1,15 @@
 # Tiddlywiki Hyper-Table
 
-本插件提供几种微件：
+Este complemento proporciona varios widgets.：
 
-- 基本表格
-  - 基本表格是一种常见的可视化数据形式，用于展示和组织数据。它由行和列的网格状结构组成，以清晰、结构化的方式呈现大量数据。基本表格通常提供一些交互和可视化功能，使用户能够对数据进行查找、排序、分页和格式化等操作。
-  - 微件为 <$basic-table />
-- 数据透视表
-  - 数据透视表又名多维分析表、交叉表、Pivot Table，指的是可以在行维度和列维度放入一个或多个维度，显示维度之间相互关系的一种表格。用户可以一目了然地分析出各种场景指标以及对比，旨在帮助业务分析推动决策。
-  - 微件为 <$pivot-table />
+- Formas basicas
+  - Las tablas basicas son una forma comun de visualizacion de datos que se utiliza para mostrar y organizar datos. Consiste en una estructura similar a una cuadricula de filas y columnas para presentar grandes cantidades de datos de forma clara y estructurada. Las tablas basicas suelen proporcionar algunas funciones visuales e interactivas que permiten a los usuarios buscar, ordenar, paginar y formatear datos.。
+  - El widget es <$basic-table />
+- Mesa dinamica
+  - La tabla dinamica tambien se conoce como tabla de analisis multidimensional y tabla cruzada.、Pivot Table，Se refiere a una tabla que puede colocar una o mas dimensiones en la dimension de fila y la dimension de columna para mostrar la relacion entre las dimensiones. Los usuarios pueden analizar varios indicadores de escenarios y comparaciones de un vistazo, con el objetivo de ayudar al analisis empresarial a impulsar la toma de decisiones.。
+  - El widget es <$pivot-table />
 
-查看文档网站了解用法：https://tiddly-gittly.github.io/hyper-table/
+Consulte el sitio web de documentacion para conocer su uso.：https://tiddly-gittly.github.io/hyper-table/
 
 This plugin provides several widgets:
 

@@ -1,5 +1,5 @@
 title: $:/plugins/linonetwo/hyper-table/language/zh-Hans/Parameters/search
 tags: BasicTable PivotTable
 field: search
-description: 是否展示搜索栏，默认是 `no`。填 `search-bar` 会在表格底部展示一个搜索框，填 `search-bar-top` 则在顶部。
+description: Ya sea para mostrar la barra de busqueda, el valor predeterminado es `no`。Complete `search-bar` Se mostrara un cuadro de busqueda en la parte inferior del formulario, complete `search-bar-top` luego en la cima。
 example: search-bar-top

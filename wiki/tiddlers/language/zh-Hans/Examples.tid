@@ -1,62 +1,62 @@
 title: language/zh-Hans/Examples
 
-! 基本表格的例子
+! Ejemplo de forma basica
 
-!! 最简单的基本表格
+!! La forma basica mas simple
 
 {{examples/SimpleTable}}
 
-!! 使用筛选器获取数据的基本表格
+!! Tabla basica para obtener datos mediante filtros.
 
 {{examples/BasicTableWithFilter}}
 
-可以双击 `title` 字段那一列，会打开相应的条目。
+Puede hacer doble clic `title` En la columna del campo se abrira la entrada correspondiente.。
 
-注意，`caption` 字段和 `description` 字段是维基文本写的嵌入语法，表格微件会自动渲染它们的嵌入结果。
+Atencion，`caption` Suma de campo `description` Los campos tienen una sintaxis incrustada escrita en Wikitext y el widget de tabla mostrara automaticamente sus resultados incrustados.。
 
 <$edit-text tiddler="examples/BasicTableWithFilter" class="tc-edit-texteditor"/>
 
-!! 编辑筛选器表格
+!! Editar tabla de filtros
 
-添加 `editable="yes"` 即可让表格可编辑，双击单元格即可编辑除标题外的所有字段。（如上面所述，双击标题字段会打开相应的条目。）
+Agregar `editable="yes"` Puede hacer que la tabla sea editable y todos los campos, excepto el titulo, se pueden editar haciendo doble clic en la celda. (Como se menciono anteriormente, al hacer doble clic en el campo del titulo se abrira la entrada correspondiente。）
 
 {{examples/BasicTableWithFilterEdit}}
 
 <$edit-text tiddler="examples/BasicTableWithFilterEdit" class="tc-edit-texteditor"/>
 
-!!! 添加创建按钮
+!!! Agregar boton de creacion
 
-使用太微核心的按钮微件即可，见其 `actions` 的用法，详见[ext[官方文档|https://bramchen.github.io/tw5-docs/zh-Hans/#ActionCreateTiddlerWidget:ActionCreateTiddlerWidget%20ButtonWidget]]。
+Simplemente use el widget de boton de Taiwei Core, consulte `actions` Para su uso, consulte[ext[Documentos oficiales|https://bramchen.github.io/tw5-docs/zh-Hans/#ActionCreateTiddlerWidget:ActionCreateTiddlerWidget%20ButtonWidget]]。
 
 {{examples/CreateButton}}
 
 <$edit-text tiddler="examples/CreateButton" class="tc-edit-texteditor"/>
 
-!! 在 title 字段展示 caption 字段的内容
+!! en title Visualizacion de campo caption Contenido de los campos
 
 {{examples/BasicTableCaptionTitle}}
 
-这里使用了 [ext[fieldFormat|https://visactor.io/vtable/option/ListTable-columns-text#fieldFormat]] 功能，它接受一个 JavaScript 函数，这个函数获得的参数是整个条目字段对象，我们使用[ext[解构赋值语法|https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment]]获得其中的 `caption` 字段的文本，在函数里我们使用了太微的 JavaScript API [ext[$tw.wiki.renderText|https://tiddly-gittly.github.io/TW5-Typed/api/classes/core.Wiki#rendertext]] 将它渲染为嵌入生效后的结果。
+Aqui usado [ext[fieldFormat|https://visactor.io/vtable/option/ListTable-columns-text#fieldFormat]] Funcion, que acepta una JavaScript Funcion, el parametro obtenido por esta funcion es el objeto de campo de entrada completo, usamos[ext[Sintaxis de asignacion de desestructuracion|https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment]]Consigue un poco `caption` Para el texto del campo, usamos Taiwei en la funcion. JavaScript API [ext[$tw.wiki.renderText|https://tiddly-gittly.github.io/TW5-Typed/api/classes/core.Wiki#rendertext]] Representarlo como resultado despues de que la incrustacion entre en vigor.。
 
 <$edit-text tiddler="examples/BasicTableCaptionTitle" class="tc-edit-texteditor"/>
 
-!! 使用 JSON 配置的基本表格
+!! uso JSON Tabla basica para configuracion
 
 {{examples/BasicTableJSONConfig}}
 
 <$edit-text tiddler="examples/BasicTableJSONConfig" class="tc-edit-texteditor"/>
 
-!! 使用 JSON 配置换行
+!! uso JSON Configurar el ajuste de linea
 
-[[查看参数表|$:/plugins/linonetwo/hyper-table/ParametersTable]]
+[[Ver tabla de parametros|$:/plugins/linonetwo/hyper-table/ParametersTable]]
 
-为了让特定列换行，我们使用了 [[https://visactor.io/vtable/option/ListTable-columns-text#style]] 里的 [[https://visactor.io/vtable/option/ListTable-columns-text#style.autoWrapText]] 配置项。学习一下参数表的源代码：
+Para ajustar columnas especificas, usamos [[https://visactor.io/vtable/option/ListTable-columns-text#style]] dentro [[https://visactor.io/vtable/option/ListTable-columns-text#style.autoWrapText]] Elementos de configuracion. Conozca el codigo fuente de la tabla de parametros.：
 
 <$codeblock code={{$:/plugins/linonetwo/hyper-table/language/zh-Hans/ParametersTable}} />
 
-! 数据透视表
+! Mesa dinamica
 
-例子基于 [ext[https://visactor.io/vtable/demo/table-type/pivot-analysis-table]]
+Ejemplos basados en [ext[https://visactor.io/vtable/demo/table-type/pivot-analysis-table]]
 
 {{examples/PivotTable}}
 

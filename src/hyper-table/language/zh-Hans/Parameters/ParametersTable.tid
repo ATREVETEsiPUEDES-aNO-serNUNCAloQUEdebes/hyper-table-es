@@ -5,22 +5,22 @@ title: $:/plugins/linonetwo/hyper-table/language/zh-Hans/ParametersTable
   [
     {
       field: 'field',
-      title: '配置项字段',
+      title: 'Campos de elementos de configuracion',
       width: 200,
       sort: true,
     },
     {
       field: 'description',
-      title: '描述',
+      title: 'Descripcion',
       width: 400,
       style: {
-        // 启用 `defaultRowHeight` 的时候，换行才生效
+        // Habilitar `defaultRowHeight` El salto de linea solo tendra efecto cuando
         autoWrapText: true,
       },
     },
     {
       field: 'example',
-      title: '例子',
+      title: 'Ejemplo',
       width: 400,
       style: {
         autoWrapText: true,
@@ -28,14 +28,14 @@ title: $:/plugins/linonetwo/hyper-table/language/zh-Hans/ParametersTable
     },
     {
       field: 'url',
-      title: '文档地址',
+      title: 'Direccion del documento',
       width: 200,
       cellType: 'link',
       sort: true,
     },
     {
       field: 'title',
-      title: '条目',
+      title: 'Entradas',
       width: 300,
       style: {
         autoWrapText: true,
@@ -44,7 +44,7 @@ title: $:/plugins/linonetwo/hyper-table/language/zh-Hans/ParametersTable
   ]
 \end
 
-!!! 基本表格
+!!! Formas basicas
 
 <$basic-table
   filter="[all[shadows]prefix[$:/plugins/linonetwo/hyper-table/language/zh-Hans/Parameters/]tag[BasicTable]]"
@@ -52,7 +52,7 @@ title: $:/plugins/linonetwo/hyper-table/language/zh-Hans/ParametersTable
   options="{ defaultRowHeight: 60 }"
 />
 
-!!! 数据透视表
+!!! Mesa dinamica
 
 <$basic-table
   filter="[all[shadows]prefix[$:/plugins/linonetwo/hyper-table/language/zh-Hans/Parameters/]tag[PivotTable]]"

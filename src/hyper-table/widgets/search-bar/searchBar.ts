@@ -60,7 +60,7 @@ export function searchBar(search: SearchComponent, containerElement: HTMLElement
     input.value = '';
     search.clear();
     resultCount.innerText = '0/0';
-    clearButton.classList.add('tc-hyper-table-hidden'); // 清除后隐藏按钮
+    clearButton.classList.add('tc-hyper-table-hidden'); // Ocultar boton despues de borrar
   };
 
   input.addEventListener('input', () => {

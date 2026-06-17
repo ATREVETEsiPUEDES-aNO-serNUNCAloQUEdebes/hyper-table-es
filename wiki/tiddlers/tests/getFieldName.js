@@ -38,7 +38,7 @@ describe('hyper-table: getFieldName / getEnumName with TraitTag schemas', functi
     // Add lingo translation for one enum value
     $tw.wiki.addTiddler(new $tw.Tiddler({
       title: '$:/test/hyper-table/lingo/en-GB/StatusActive',
-      text: '进行中',
+      text: 'En progreso',
     }));
   });
 

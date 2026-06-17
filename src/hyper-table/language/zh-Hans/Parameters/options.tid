@@ -1,6 +1,6 @@
 title: $:/plugins/linonetwo/hyper-table/language/zh-Hans/Parameters/options
 tags: BasicTable PivotTable
 field: options
-description: 补充其它配置项，可以使用 JS 语法，也可以是 JSON。这里的配置项会覆盖默认配置项。
-example: 使用例如 tooltip 等功能，详见 visactor 的文档
+description: Complemente otros elementos de configuracion, puede usar JS Gramatica, que tambien puede ser JSON。Los elementos de configuracion aqui anularan los elementos de configuracion predeterminados.。
+example: Utilice p.e. tooltip y otras funciones, consulte visactor Documentacion
 url: https://visactor.io/vtable/option/

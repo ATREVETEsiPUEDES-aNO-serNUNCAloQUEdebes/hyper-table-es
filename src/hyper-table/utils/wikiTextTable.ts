@@ -18,17 +18,17 @@ export function parseWikiTextTable(input: string): undefined | { columns: Column
     return;
   }
 
-  // 过滤出所有 tr 元素
+  // Filtrar todo tr Elementos
   const trs = trElements.filter(tr => tr.type === 'element' && tr.tag === 'tr');
   if (trs.length === 0) {
     return;
   }
 
-  // 提取单元格文本的辅助函数
+  // Funcion auxiliar para extraer texto de celda
   const extractText = (element: ParsedNode | undefined): string => {
     if (!element?.children) return '';
 
-    // 递归提取所有文本节点
+    // Extraiga todos los nodos de texto de forma recursiva.
     const extractTextFromChildren = (children: ParsedNode[]): string => {
       return children.map(child => {
         if (child.type === 'text') {
@@ -44,7 +44,7 @@ export function parseWikiTextTable(input: string): undefined | { columns: Column
     return extractTextFromChildren(element.children).trim();
   };
 
-  // 获取表头行
+  // Obtenga la fila del encabezado
   const headerRow = trs[0];
   const headerCells = (headerRow.children ?? []).filter(cell => cell.type === 'element' && (cell.tag === 'th' || cell.tag === 'td'));
 
@@ -52,18 +52,18 @@ export function parseWikiTextTable(input: string): undefined | { columns: Column
     return;
   }
 
-  // 构建列定义和字段名映射
+  // Cree definiciones de columnas y asignacion de nombres de campos
   const columns: ColumnsDefine = [];
   const fieldNames: string[] = [];
 
   headerCells.forEach((cell, index) => {
     const title = extractText(cell);
-    // 将标题转换为字段名
+    // Convertir titulo en nombre de campo
     let field = title
       ? title.trim().replaceAll(/[^\s\w]/g, '').replaceAll(/\s+/g, '').replace(/^(.)/, match => match.toLowerCase())
       : `column${index + 1}`;
 
-    // 确保字段名是唯一的
+    // Asegurese de que los nombres de los campos sean unicos
     if (fieldNames.includes(field)) {
       field = `${field}${index}`;
     }
@@ -78,10 +78,10 @@ export function parseWikiTextTable(input: string): undefined | { columns: Column
     });
   });
 
-  // 构建数据记录
+  // Cree registros de datos
   const records: Array<Record<string, string>> = [];
 
-  // 从第二行开始解析数据
+  // Comience a analizar los datos desde la segunda linea.
   for (let index = 1; index < trs.length; index++) {
     const dataRow = trs[index];
     const dataCells = (dataRow.children ?? []).filter(cell => cell.type === 'element' && (cell.tag === 'td' || cell.tag === 'th'));
@@ -90,7 +90,7 @@ export function parseWikiTextTable(input: string): undefined | { columns: Column
 
     const record: Record<string, string> = {};
 
-    // 将每个单元格的值与相应的列字段关联
+    // Asociar el valor de cada celda con el campo de la columna correspondiente
     dataCells.forEach((cell, cellIndex) => {
       if (cellIndex < fieldNames.length) {
         const field = fieldNames[cellIndex];
@@ -98,7 +98,7 @@ export function parseWikiTextTable(input: string): undefined | { columns: Column
       }
     });
 
-    // 只有当记录有数据时才添加
+    // Agregar solo cuando el registro tenga datos
     if (Object.keys(record).length > 0) {
       records.push(record);
     }
